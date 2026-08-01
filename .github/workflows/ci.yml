@@ -27,7 +27,7 @@ jobs:
     # Step 1: LINT
     - name: 1. Run Linting
       run: |
-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        flake8 week1 --count --select=E9,F63,F7,F82 --show-source --statistics
 
     # Step 2: TEST
     - name: 2. Run Tests
@@ -37,4 +37,4 @@ jobs:
     # Step 3: BUILD
     - name: 3. Build Docker Image
       run: |
-        docker build -t nexor-app:latest .
+        docker build -t nexor-app:latest ./week1
